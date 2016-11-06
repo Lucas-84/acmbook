@@ -26,9 +26,39 @@ struct FenwickTree {
   }
 };
 
-// Fenwick tree 2D - Sommes sur rectangles 
+// Fenwick Tree 2D classique - Sommes sur rectangles
+// Temps : O(log^2 n) par requete
+// Memoire : O(n^2)
+struct FenwickTree2D {
+  vector<vector<int>> tree;
+  // a = [1 .. n][1 .. m]
+  FenwickTree2D(int n, int m) {
+    tree = vector<vector<int>>(n);
+    for (int i = 0; i < n; ++i) =
+      tree[i] = vector<int>(m);
+  }
+  // a[x][y] += v
+  void add(int x, int y, int v) {
+    for (; x < (int)tree.size(); x |= (x + 1))
+      for (int j = y; j < (int)tree[x].size(); j |= (j + 1))
+        tree[x][j] += v;
+  }
+  // sum (0 <= i <= x; 0 <= j <= y) a[i][j]
+  int sum(int x, int y) {
+    int ans = 0;
+    for (; x >= 0; x = (x & (x + 1)) - 1) 
+      for (int j = y; j >= 0; j = (j & (j + 1)) - 1)
+        ans += tree[x][j];
+    return ans;
+  }
+  // sum (x1 <= x <= x2; y1 <= y <= y2) a[x][y]
+  int sum(int x1, int y1, int x2, int y2) {
+    return sum(x2, y2) - sum(x1 - 1, y2) - sum(x2, y1 - 1) + sum(x1 - 1, y1 - 1);
+  }
+};
+
+// Fenwick tree 2D compresse 
 // Necessite deux passes sur les requetes
-// Idee : on compresse les coordonnees sur chaque tree[x]
 // Temps : O(log^2 n) par requete
 // Memoire : O(n log n)
 // /!\ type
@@ -81,33 +111,4 @@ struct FenwickTree2DCompressed {
     return sum(x2, y2) - sum(x1 - 1, y2) - sum(x2, y1 - 1) + sum(x1 - 1, y1 - 1);
   }
 };
-
-struct FenwickTree2D {
-  vector<vector<int>> tree;
-  // a = [1 .. n][1 .. m]
-  FenwickTree2D(int n, int m) {
-    tree = vector<vector<int>>(n);
-    for (int i = 0; i < n; ++i) =
-      tree[i] = vector<int>(m);
-  }
-  // a[x][y] += v
-  void add(int x, int y, int v) {
-    for (; x < (int)tree.size(); x |= (x + 1))
-      for (int j = y; j < (int)tree[x].size(); j |= (j + 1))
-        tree[x][j] += v;
-  }
-  // sum (0 <= i <= x; 0 <= j <= y) a[i][j]
-  int sum(int x, int y) {
-    int ans = 0;
-    for (; x >= 0; x = (x & (x + 1)) - 1) 
-      for (int j = y; j >= 0; j = (j & (j + 1)) - 1)
-        ans += tree[x][j];
-    return ans;
-  }
-  // sum (x1 <= x <= x2; y1 <= y <= y2) a[x][y]
-  int sum(int x1, int y1, int x2, int y2) {
-    return sum(x2, y2) - sum(x1 - 1, y2) - sum(x2, y1 - 1) + sum(x1 - 1, y1 - 1);
-  }
-};
-
 
