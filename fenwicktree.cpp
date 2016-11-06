@@ -34,7 +34,7 @@ struct FenwickTree2D {
   // a = [1 .. n][1 .. m]
   FenwickTree2D(int n, int m) {
     tree = vector<vector<int>>(n);
-    for (int i = 0; i < n; ++i) =
+    for (int i = 0; i < n; ++i)
       tree[i] = vector<int>(m);
   }
   // a[x][y] += v
