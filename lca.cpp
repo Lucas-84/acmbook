@@ -20,7 +20,8 @@ struct LCA {
     tout[u] = ++timer;
   }
 
-  // adj : adjacency list of an undirected acyclic graph 
+  // adj : liste d'adjacence de l'arbre
+  // peut contenir eventuellement des aretes vers un parent
   LCA(vector<vector<int>> adj, int root) {
     int n = (int)adj.size();
     this->adj = adj;
