@@ -10,7 +10,9 @@
 // /!\ Ne pas utiliser les hash modulo 2^64 http://codeforces.com/blog/entry/4898(
 // Utiliser un modulo suffit generalement (/!\ paradoxe des anniversaires)
 // Sinon utiliser deux mod
-// Quelques premiers de l'ordre de 10^9 : 10^9 + 7 ; 10^9 + 9 ; 10^9 + 123 // Trouver le reste entre 0 et M - 1 de a/M : (a % M + M) % M typedef long long ll;
+// Quelques premiers de l'ordre de 10^9 : 10^9 + 7 ; 10^9 + 9 ; 10^9 + 123 
+// Trouver le reste entre 0 et M - 1 de a/M : (a % M + M) % M
+typedef long long ll;
 ll posmod(ll a, ll M) { return (a % M + M) % M; }
 
 struct StringHash {
