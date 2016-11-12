@@ -4,17 +4,22 @@
 struct UnionFind {
   vector<int> cc;
   vector<int> ccsz;
+
+  UnionFind() {}
+
   UnionFind(int n) {
     cc = vector<int>(n);
     ccsz = vector<int>(n);
     for (int i = 0; i < n; ++i)
       cc[i] = i;
   }
+
   int find(int i) {
     if (cc[i] != i)
       cc[i] = find(cc[i]);
     return cc[i];
   }
+
   bool merge(int i, int j) {
     i = find(i);
     j = find(j);
