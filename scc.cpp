@@ -43,7 +43,6 @@ struct SCC {
     seen = vector<bool>(n);
     for (int t = n - 1; t >= 0; --t) {
       int u = order[t];
-      //printf("ith-node: %d\n", u);
       if (!seen[u])
         mark_scc(u, nb_scc++);
     }
