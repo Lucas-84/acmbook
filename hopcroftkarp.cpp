@@ -1,22 +1,31 @@
+// Nombre max de noeuds
+const int MAXN = 50 * 1000;
+// assert(INF > MAXN)
+const int INF = 1000 * 1000 * 1000;
+
 // Hopcroft-Karp
 // Max matching en O(|E| sqrt(|V|))
-namespace HopcroftKarp {
-  // Nombre max de noeuds
-  const int MAXN = 10 * 1000;
-  // assert(INF > MAXN)
-  const int INF = 1000 * 1000 * 1000;
-  vector<int> adj[MAXN + 1];
-
+struct HopcroftKarp {
   const int NIL = MAXN;
+  vector<int> adj[MAXN + 1];
   int pairu[MAXN + 1];
   int pairv[MAXN + 1];
   int dist[MAXN + 1];
-  int N;
+  int nl, nr;
+
+  HopcroftKarp() {}
+  // nl : #noeuds a gauche
+  // nr : #noeuds a droite
+  HopcroftKarp(int nl, int nr) : nl(nl), nr(nr) {}
+
+  void add_edge(int u, int v) {
+    adj[u].push_back(v);
+  }
 
   bool bfs() {
     queue<int> q;
 
-    for (int u = 0; u < N; ++u) {
+    for (int u = 0; u < nl; ++u) {
       if (pairu[u] == NIL) {
         dist[u] = 0;
         q.push(u);
@@ -31,7 +40,6 @@ namespace HopcroftKarp {
       q.pop();
       
       if (dist[u] >= dist[NIL])
-        //break;
         continue;
 
       for (int v: adj[u]) {
@@ -60,16 +68,15 @@ namespace HopcroftKarp {
     return false;
   }
 
-  int compute() {
-    fill(pairu, pairu + N, NIL);
-    fill(pairv, pairv + N, NIL);
+  int maxmatching() {
+    fill(pairu, pairu + nl, NIL);
+    fill(pairv, pairv + nr, NIL);
     int ans = 0;
     while (bfs())
-      for (int u = 0; u < N; ++u)
+      for (int u = 0; u < nl; ++u)
         if (pairu[u] == NIL && dfs(u))
           ++ans;
     return ans;
   }
-}
-
+};
 
