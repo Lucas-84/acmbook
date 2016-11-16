@@ -4,7 +4,7 @@ const int MAXN = 50 * 1000;
 const int INF = 1000 * 1000 * 1000;
 
 // Hopcroft-Karp
-// Max matching en O(|E| sqrt(|V|))
+// Max cardinality matching en O(|E| sqrt(|V|))
 struct HopcroftKarp {
   const int NIL = MAXN;
   vector<int> adj[MAXN + 1];
