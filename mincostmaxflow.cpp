@@ -139,8 +139,10 @@ namespace Mcmf_dijkstra {
   }
 
   void edge(int x, int y, ll c, ll w) {
-    from[E] = x; adj[E] = y; cap[E] = c; cost[E] = +w; next[E] = last[x]; last[x] = E++;
-    from[E] = y; adj[E] = x; cap[E] = 0; cost[E] = -w; next[E] = last[y]; last[y] = E++;
+    from[E] = x; adj[E] = y; cap[E] = c; cost[E] = +w;
+    next[E] = last[x]; last[x] = E++;
+    from[E] = y; adj[E] = x; cap[E] = 0; cost[E] = -w;
+    next[E] = last[y]; last[y] = E++;
   }
 
   pair<ll, ll> run(int src, int sink) {

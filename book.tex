@@ -1,0 +1,175 @@
+%\documentclass[landscape,a4paper,twocolumn,10pt]{report}
+\documentclass[a4paper, twocolumn, 10pt]{report}
+
+% \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{amsmath,amssymb,listings,array,fancyhdr}
+\usepackage[landscape,pdftex,top=0.8cm,bottom=0.5cm,left=0.475cm,right=0.475cm]{geometry}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\lstset{
+  language=C++,
+  morekeywords=
+  { lli, llu, pii, piii, vi, vii, viii, vvi, vvii, vviii,
+    pt, FOR, FORU, FORD
+  },
+  basicstyle=\ttfamily,
+  keywordstyle=\color{blue}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  commentstyle=\color{dkgreen}\ttfamily,
+  morecomment=[l][\color{magenta}]{\#}
+}
+
+\setlength{\columnsep}{15pt}
+\setlength{\columnseprule}{1pt}
+
+\makeatletter
+\def\timenow{\@tempcnta\time
+  \@tempcntb\@tempcnta
+  \divide\@tempcntb60
+  \ifnum10>\@tempcntb0\fi\number\@tempcntb
+  \multiply\@tempcntb60
+  \advance\@tempcnta-\@tempcntb
+  :\ifnum10>\@tempcnta0\fi\number\@tempcnta}
+\makeatother
+
+\pagestyle{fancy}
+\chead{}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+
+\footnotesize
+\subsection*{Graphs}
+\subsubsection*{Topological sort}
+\lstinputlisting{toposort.cpp}
+\subsubsection*{Strongly connected components}
+\lstinputlisting{scc.cpp}
+\subsubsection*{2-SAT}
+\lstinputlisting{sat2.cpp}
+\subsubsection*{Hopcroft-Karp}
+\lstinputlisting{hopcroftkarp.cpp}
+\subsubsection*{Hungarian algorithm}
+\lstinputlisting{hungarian.cpp}
+\subsubsection*{Dinic}
+\lstinputlisting{dinic.cpp}
+\subsubsection*{Push-relabel}
+\lstinputlisting{pushrelabel.cpp}
+\subsubsection*{Min-cost max-flow}
+\lstinputlisting{mincostmaxflow.cpp}
+\subsubsection*{Circulation}
+\lstinputlisting{circulation.cpp}
+\subsubsection*{Directed MST}
+\lstinputlisting{directedmst.cpp}
+
+\newpage
+\subsection*{Maths}
+\subsubsection*{Extended euclidian algorithm}
+\lstinputlisting{euclid.cpp}
+\subsubsection*{Gauss}
+\lstinputlisting{gauss.cpp}
+\subsubsection*{Prime list}
+\lstinputlisting{primelist.cpp}
+\subsubsection*{Factorization}
+\lstinputlisting{factorize.cpp}
+\subsubsection*{FFT}
+\lstinputlisting{fft.cpp}
+\subsubsection*{Simplex}
+\lstinputlisting{simplex.cpp}
+\subsubsection*{Geometry}
+\lstinputlisting{geometry.cpp}
+
+\newpage
+\subsection*{Data structures}
+\subsubsection*{Binary indexed trees}
+\lstinputlisting{fenwicktree.cpp}
+\subsubsection*{LCA}
+\lstinputlisting{lca.cpp}
+\subsubsection*{HLD}
+\lstinputlisting{hld.cpp}
+\subsubsection*{Link-cut}
+\lstinputlisting{linkcut.cpp}
+\subsubsection*{Convex hull trick}
+\lstinputlisting{convexhulltrick.cpp}
+\subsubsection*{Segment tree}
+\lstinputlisting{segmenttree.cpp}
+\subsubsection*{Treap}
+\lstinputlisting{treap.cpp}
+\subsubsection*{Monotonic queue}
+\lstinputlisting{monotonequeue.cpp}
+\subsubsection*{Union-Find}
+\lstinputlisting{unionfind.cpp}
+
+\newpage
+\subsection*{Strings}
+\subsubsection*{Aho-Corasick}
+\lstinputlisting{ahocorasick.cpp}
+\subsubsection*{Palindromic tree}
+\lstinputlisting{palindromictree.cpp}
+\subsubsection*{Suffix array}
+\lstinputlisting{suffixarray.cpp}
+\subsubsection*{Z function}
+\lstinputlisting{zfunction.cpp}
+\subsubsection*{Prefix function}
+\lstinputlisting{prefix.cpp}
+\subsubsection*{Min rotation}
+\lstinputlisting{minrotation.cpp}
+\subsubsection*{Manacher}
+\lstinputlisting{manacher.cpp}
+\subsubsection*{Suffix automaton}
+\lstinputlisting{suffixautomaton.cpp}
+\subsubsection*{String hash}
+\lstinputlisting{stringhash.cpp}
+
+\newpage
+\subsection*{Formulas}
+
+\subsubsection*{Maths}
+Bernoulli numbers: \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+$n$ & 0 & 1 & 2 & 4 & 6 & 8 & 10 & 12\\
+\hline
+$B_n$ & 1 & -1/2 & 1/6 & -1/30 & 1/42 & -1/30 & 5/66 & -691/2730 \\
+\hline
+\end{tabular}
+
+\medskip
+
+\noindent $B_{2n+3} = 0$
+
+\medskip
+
+\noindent $(m+1) B_m = - \sum_{k=0}^{m-1}\binom{k}{m+1}B_k$
+
+\medskip
+
+\noindent $\sum_{k=1}^nk^m=\frac{1}{m+1}\sum_{k=0}^m\binom{m+1}{k}B_kn^{m+1-k}$.
+
+\medskip
+
+\noindent $\sum_{k=a}^{b-1}f(k)=\int_a^bf(t)dt+\sum_{k=1}^n\frac{B_k}{k!}\left(f^{(k-1)}(b)-f^{(k-1)}(a)\right)+\frac{(-1)^{n+1}}{n!}\int_a^bB_n(t)f^{(n)}(t)dt$.
+
+\medskip
+
+\noindent $n\geq 1$. $\zeta(2n)=(-1)^{n-1}2^{2n-1}\frac{B_{2n}}{(2n)!}\pi^{2n}$.
+
+\noindent Pick's theorem: $A=I+\frac{1}{2}B-1$. ($A$ area polygon, $I$ number of interior points, $B$ number of boundary points).
+
+\subsubsection*{Triangle geometry}
+
+$p=\frac{a+b+c}{2}$.\\
+Area: $A=\frac{\sin\alpha}{a}=\sqrt{p(p-a)(p-b)(p-c)}$.\\
+Incircle: $r=\frac{A}{p}$. $I=\frac{a}{2p}A+\frac{b}{2p}B+\frac{c}{2p}C$.\\
+Length of the angle bissector through $A$: $i_a=\frac{2}{b+c}\sqrt{p(p-a)bc}$.\\
+Circumcircle: $R=\frac{abc}{4A}=\frac{a}{2\sin\alpha}$. $O=\frac{1}{\sin(2\alpha)+\sin(2\beta)+\sin(2\gamma)}(\sin(2\alpha)A+\sin(2\beta)B+\sin(2\gamma)C)$.\\
+Orthocenter: $H=\frac{1}{\tan\alpha+\tan\beta+\tan\gamma}(\tan(\alpha)A+\tan(\beta)B+\tan(\gamma)C)$.\\
+Law of cosines: $c^2=a^2+b^2-2ab\cos(\gamma)$.
+
+
+\end{document}

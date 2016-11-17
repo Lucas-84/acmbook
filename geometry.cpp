@@ -1,5 +1,5 @@
 // Geometrie
-// Tire de https://github.com/jaehyunp/stanfordacm/blob/master/stanford-cardinal-16/src/geom_library.cpp
+// Tire de https://github.com/jaehyunp/stanfordacm/
 double INF = 1e100;
 double EPS = 1e-12;
 
@@ -94,7 +94,8 @@ PT ComputeLineIntersection(PT a, PT b, PT c, PT d) {
 PT ComputeCircleCenter(PT a, PT b, PT c) {
   b = (a + b) / 2;
   c = (a + c) /2;
-  return ComputeLineIntersection(b, b + RotateCW90(a - b), c, c + RotateCW90(a - c));
+  return ComputeLineIntersection(b, b + RotateCW90(a - b), c, 
+                                 c + RotateCW90(a - c));
 }
 
 // determine if point is in a possibly non-convex polygon (by William

@@ -14,9 +14,11 @@ struct ConvexHullTrick {
     while (tl - hd >= 2) {
       ll a1 = a[tl - 1], b1 = b[tl - 1];
       ll a2 = a[tl - 2], b2 = b[tl - 2];
-      if ((long double)(b0 - b2) * (a1 - a0) < (long double)(b0 - b1) * (a2 - a0))
+      if ((long double)(b0 - b2) * (a1 - a0) < 
+          (long double)(b0 - b1) * (a2 - a0))
         break;
-      //if ((long double)1 * (b0 - b2) / (a2 - a0) < (long double)1 * (b0 - b1) / (a1 - a0))
+      //if ((long double)1 * (b0 - b2) / (a2 - a0) < 
+      //    (long double)1 * (b0 - b1) / (a1 - a0))
       //  break;
       tl--;
     }
@@ -35,7 +37,7 @@ struct ConvexHullTrick {
   }
 };
 
-// Inspire de https://github.com/niklasb/contest-algos/blob/master/convex_hull/dynamic.cpp
+// Inspire de https://github.com/niklasb/contest-algos/
 // Variante du precedent sans hypothese sur les a[i] et les b[i] 
 const ll QUERY = -(1LL << 62);
 struct Line {
@@ -61,7 +63,8 @@ struct DynamicConvexHullTrick : public multiset<Line> {
     auto x = prev(y);
     if (z == end())
       return y->a == x->a && y->b >= x->b;
-    return (long double)(x->b - y->b) * (z->a - y->a) >= (long double)(y->b - z->b) * (y->a - x->a);
+    return (long double)(x->b - y->b) * (z->a - y->a) >= 
+           (long double)(y->b - z->b) * (y->a - x->a);
   }
 
   void add(ll a, ll b) {

@@ -4,7 +4,8 @@
 // Given a directed weighted graph and root node, computes the minimum spanning
 // directed tree (arborescence) on it.
 //
-// Complexity: O(N * M), where N is the number of nodes, and M the number of edges
+// Complexity: O(N * M), where N is the number of nodes, and M the number
+// of edges
 struct Edge { int x, y, w; };
 
 int dmst(int N, vector<Edge> E, int root) {

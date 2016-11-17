@@ -15,7 +15,8 @@ struct PrimeList {
         lp[i] = i;
         primes.push_back(i);
       }
-      for (int j = 0; j < (int)primes.size() && primes[j] <= lp[i] && i * primes[j] <= n; ++j)
+      for (int j = 0; j < (int)primes.size() && primes[j] <= lp[i] 
+                   && i * primes[j] <= n; ++j)
         lp[i * primes[j]] = primes[j];
     }
   }

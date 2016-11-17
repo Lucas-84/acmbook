@@ -1,5 +1,5 @@
 // Link cut trees
-// Tire de https://github.com/jaehyunp/stanfordacm/blob/master/stanford-cardinal-16/src/ds_link_cut_tree.cpp
+// Tire de https://github.com/jaehyunp/stanfordacm/
 enum { LEFT, RIGHT };
 
 struct node {
@@ -10,7 +10,9 @@ struct node {
   void update(bool change = false, int new_value = 0) {
     if (change) value = new_value;
     subtree_value = value;
-    FOR (d, 2) if (child[d] != nullptr) subtree_value += child[d]->subtree_value;
+    FOR (d, 2)
+      if (child[d] != nullptr)
+        subtree_value += child[d]->subtree_value;
   }
 
   void propagate() {

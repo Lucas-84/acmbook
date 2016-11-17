@@ -1,7 +1,8 @@
 // Suffix Array & LCP
 // Construction en O(n log^2 n) 
 struct SuffixArray {
-  // sa[i] = pos du premier caractere du i-eme suffixe dans l'ordre lexicographique
+  // sa[i] = pos du premier caractere du i-eme suffixe dans l'ordre
+  // lexicographique
   vector<int> sa;
   // pos[i] a l'issue du constructeur : position de s[i .. n-1] dans sa
   vector<int> pos;
@@ -37,7 +38,8 @@ struct SuffixArray {
 
     for (gap = 1; gap <= n; gap *= 2) {
       sort(sa.begin(), sa.end(), Compare(*this));
-      for (int i = 1; i < n; ++i) tmp[i] = tmp[i - 1] + Compare(*this)(sa[i - 1], sa[i]);
+      for (int i = 1; i < n; ++i)
+        tmp[i] = tmp[i - 1] + Compare(*this)(sa[i - 1], sa[i]);
       for (int i = 0; i < n; ++i) pos[sa[i]] = tmp[i];
     }
 

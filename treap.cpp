@@ -1,5 +1,5 @@
 // Treap
-// Tire de https://github.com/jaehyunp/stanfordacm/blob/master/stanford-cardinal-16/src/ds_treap.cpp
+// Tire de https://github.com/jaehyunp/stanfordacm/
 typedef int value;
 
 enum { LEFT, RIGHT };
@@ -19,8 +19,10 @@ inline void update(node *a) {
   if (a == nullptr) return;
   a->size = size(a->child[0]) + size(a->child[1]) + 1;
   a->subtree = a->x;
-  if (a->child[LEFT] != nullptr) a->subtree = a->child[LEFT]->subtree + a->subtree;
-  if (a->child[RIGHT] != nullptr) a->subtree = a->subtree + a->child[RIGHT]->subtree;
+  if (a->child[LEFT] != nullptr)
+    a->subtree = a->child[LEFT]->subtree + a->subtree;
+  if (a->child[RIGHT] != nullptr)
+    a->subtree = a->subtree + a->child[RIGHT]->subtree;
 }
 
 node *rotate(node *a, bool d) {

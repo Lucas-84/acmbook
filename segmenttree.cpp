@@ -12,11 +12,16 @@ struct SegmentTree {
   int n;
  
   SegmentTree(int n, T neutral = T(),
-                     function<void (vector<T>&, int, int, int)> push_up = nullptr,
-                     function<int (vector<T>&, int, int, int, T, T)> combine_results = nullptr,
-                     function<void (vector<T>&, int, int, int, T)> update_node = nullptr,
-                     function<void (vector<T>&, int, int, int, T)> update_push = nullptr,
-                     function<void (vector<T>&, vector<T>&, int, int, int)> push_down = nullptr) {
+                     function<void (vector<T>&, int, int, int)> 
+                       push_up = nullptr,
+                     function<int (vector<T>&, int, int, int, T, T)>
+                       combine_results = nullptr,
+                     function<void (vector<T>&, int, int, int, T)>
+                       update_node = nullptr,
+                     function<void (vector<T>&, int, int, int, T)>
+                       update_push = nullptr,
+                     function<void (vector<T>&, vector<T>&, int, int, int)>
+                       push_down = nullptr) {
     this->neutral = neutral;
     this->push_up = push_up;
     this->combine_results = combine_results;
@@ -56,10 +61,14 @@ struct SegmentTree {
     if (push_down) push_down(tree, push_tree, u, l, r);
     int m = (l + r) / 2;
     if (qr <= m)
-      return combine_results(tree, u, l, r, query(ql, qr, l, m, 2 * u), neutral);
+      return combine_results(tree, u, l, r, 
+                             query(ql, qr, l, m, 2 * u), neutral);
     if (ql > m)
-      return combine_results(tree, u, l, r, neutral, query(ql, qr, m + 1, r, 2 * u + 1));
-    return combine_results(tree, u, l, r, query(ql, qr, l, m, 2 * u), query(ql, qr, m + 1, r, 2 * u + 1));
+      return combine_results(tree, u, l, r, neutral, 
+                             query(ql, qr, m + 1, r, 2 * u + 1));
+    return combine_results(tree, u, l, r, 
+                           query(ql, qr, l, m, 2 * u),
+                           query(ql, qr, m + 1, r, 2 * u + 1));
   }
 
   T query(int ql, int qr) {

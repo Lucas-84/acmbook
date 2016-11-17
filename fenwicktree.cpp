@@ -53,7 +53,8 @@ struct FenwickTree2D {
   }
   // sum (x1 <= x <= x2; y1 <= y <= y2) a[x][y]
   int sum(int x1, int y1, int x2, int y2) {
-    return sum(x2, y2) - sum(x1 - 1, y2) - sum(x2, y1 - 1) + sum(x1 - 1, y1 - 1);
+    return sum(x2, y2) - sum(x1 - 1, y2) - sum(x2, y1 - 1) +
+           sum(x1 - 1, y1 - 1);
   }
 };
 
@@ -95,20 +96,23 @@ struct FenwickTree2DCompressed {
   // a[x][y] += v
   void add(int x, int y, int v) {
     for (; x < (int)tree.size(); x |= (x + 1))
-      for (int j = lower_bound(nodes[x].begin(), nodes[x].end(), y) - nodes[x].begin(); j < (int)nodes[x].size(); j |= (j + 1))
+      for (int j = lower_bound(nodes[x].begin(), nodes[x].end(), y) 
+                 - nodes[x].begin(); j < (int)nodes[x].size(); j |= (j + 1))
         tree[x][j] += v;
   }
   // sum (0 <= i <= x; 0 <= j <= y) a[i][j]
   int sum(int x, int y) {
     int ans = 0;
     for (; x >= 0; x = (x & (x + 1)) - 1) 
-      for (int j = lower_bound(nodes[x].begin(), nodes[x].end(), y) - nodes[x].begin(); j >= 0; j = (j & (j + 1)) - 1)
+      for (int j = lower_bound(nodes[x].begin(), nodes[x].end(), y)
+                 - nodes[x].begin(); j >= 0; j = (j & (j + 1)) - 1)
         ans += tree[x][j];
     return ans;
   }
   // sum (x1 <= x <= x2; y1 <= y <= y2) a[x][y]
   int sum(int x1, int y1, int x2, int y2) {
-    return sum(x2, y2) - sum(x1 - 1, y2) - sum(x2, y1 - 1) + sum(x1 - 1, y1 - 1);
+    return sum(x2, y2) - sum(x1 - 1, y2) - sum(x2, y1 - 1) + 
+           sum(x1 - 1, y1 - 1);
   }
 };
 

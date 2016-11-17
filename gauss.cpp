@@ -38,7 +38,8 @@ struct Gauss {
         // Pour Gauss modulaire : remplacer par l'inverse de mat[posnz_cur][col]
         double factor = mat[lin][col] / mat[posnz_cur][col];
         for (int i = 0; i <= nb_cols; ++i)
-          mat[lin][i] -= factor * mat[posnz_cur][i]; // Gauss mod : rajouter le modulo
+          mat[lin][i] -= factor * mat[posnz_cur][i];
+          // Gauss mod : rajouter le modulo
       }
 
       posnz[col] = posnz_cur++;
@@ -47,7 +48,8 @@ struct Gauss {
     // Genere une solution valide
     for (int col = 0; col < nb_cols; ++col) {
       if (posnz[col] != -1)
-        value[col] = mat[posnz[col]][nb_cols] / mat[posnz[col]][col]; // Gauss mod
+        value[col] = mat[posnz[col]][nb_cols] / mat[posnz[col]][col];
+      // Gauss mod
       else 
         value[col] = 0;
     }
