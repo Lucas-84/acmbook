@@ -1,3 +1,18 @@
+// Remarques sur max flow :
+// - probleme avec une borne inf :
+//  1) trouver un flot arbitraire entre S et T tq
+//        cmin[u][v] <= flot[u][v] <= cmax[u][v]
+// Ajouter une nouvelle source S' et un nouveau puits T'
+// Poser c[u][v] := cmax[u][v] - cmin[u][v]
+//       c[S'][v] := sum(cmin[u][v], u in V)
+//       c[u][T'] := sum(cmin[u][v], v in V)
+//       c[T][S] := INF
+// (Theoreme) L'ancien graphe a un flot qui verifie les conditions ssi. le
+// nouveau graphe a un flot saturant, ie. si sa valeur est exactement
+//     sum(cmin[u][v], u, v in V)
+// (et si c'est le cas, c'est forcement un flot max dans le nouveau graphe)
+//  2) trouver le flot min verifiant ces conditions : dichotomie sur la valeur
+//  de INF ?
 const int INF = 1000 * 1000 * 1000;
 
 // Max flow en O(V^3))
