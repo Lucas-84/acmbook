@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.11.14)  17 NOV 2016 04:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.11.14)  17 NOV 2016 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -417,18 +417,18 @@ File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 ) (./book.aux)
 \openout1 = `book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
 
 (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -454,19 +454,19 @@ LaTeX Font Info:    ... okay on input line 46.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: landscape 
 * h-part:(L,W,R)=(13.51523pt, 818.01639pt, 13.51523pt)
-* v-part:(T,H,B)=(22.76228pt, 560.51923pt, 14.22636pt)
+* v-part:(T,H,B)=(42.67912pt, 540.60239pt, 14.22636pt)
 * \paperwidth=845.04684pt
 * \paperheight=597.50787pt
 * \textwidth=818.01639pt
-* \textheight=560.51923pt
+* \textheight=540.60239pt
 * \oddsidemargin=-58.75476pt
 * \evensidemargin=-58.75476pt
-* \topmargin=-86.5077pt
+* \topmargin=-66.59087pt
 * \headheight=12.0pt
-* \headsep=25.0pt
+* \headsep=2.84544pt
 * \topskip=10.0pt
-* \footskip=30.0pt
-* \marginparwidth=4.0pt
+* \footskip=0.0pt
+* \marginparwidth=9.0pt
 * \marginparsep=10.0pt
 * \columnsep=15.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
@@ -479,10 +479,17 @@ LaTeX Font Info:    ... okay on input line 46.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(./toposort.cpp) (./scc.cpp) (./sat2.cpp [1
+(./toposort.cpp) (./scc.cpp) (./sat2.cpp
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./hopcroftkarp.cpp) (./h
-ungarian.cpp [2]) (./dinic.cpp
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.07225pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+]) (./hopcroftkarp.cpp)
+(./hungarian.cpp [2]) (./dinic.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3])
@@ -520,7 +527,10 @@ Overfull \hbox (6.50084pt too wide) in paragraph at lines 116--117
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5])
+ [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
 (./circulation.cpp
 Overfull \hbox (6.50084pt too wide) in paragraph at lines 4--5
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
@@ -535,10 +545,10 @@ Overfull \hbox (6.50084pt too wide) in paragraph at lines 20--22
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
+[6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6])
+)
 (./directedmst.cpp
 Overfull \hbox (1.40073pt too wide) in paragraph at lines 4--5
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
@@ -546,34 +556,35 @@ Overfull \hbox (1.40073pt too wide) in paragraph at lines 4--5
 [] 
  []
 
-) [7] (./euclid.cpp) (./gauss.cpp
+[7]) (./euclid.cpp) (./gauss.cpp
 Overfull \hbox (6.50084pt too wide) in paragraph at lines 5--6
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][] 
  []
 
-
+[8]
 Overfull \hbox (6.50084pt too wide) in paragraph at lines 38--39
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][] 
  []
 
-) (./primelist.cpp [8]) (./factorize.cpp) (./fft.cpp
+) (./primelist.cpp) (./factorize.cpp) (./fft.cpp [9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9])
-(./simplex.cpp
+)
+(./simplex.cpp [10]
 Overfull \hbox (6.50084pt too wide) in paragraph at lines 75--76
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./geometry.cpp [10]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+)
+(./geometry.cpp [11]
 Overfull \hbox (6.50084pt too wide) in paragraph at lines 74--75
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -582,82 +593,77 @@ Overfull \hbox (6.50084pt too wide) in paragraph at lines 74--75
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-) [12]
-(./fenwicktree.cpp
+ [12])
+(./fenwicktree.cpp [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13])
-(./lca.cpp) (./hld.cpp
+)
+(./lca.cpp [14]) (./hld.cpp) (./linkcut.cpp [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14])
-(./linkcut.cpp
+)
+(./convexhulltrick.cpp [16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15])
-(./convexhulltrick.cpp
+)
+(./segmenttree.cpp [17]) (./treap.cpp
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16])
-(./segmenttree.cpp) (./treap.cpp [17]
+ [18]
 Overfull \hbox (6.50084pt too wide) in paragraph at lines 84--85
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][] 
  []
 
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(./monotonequeue.cpp) (./unionfind.cpp [18]) (./ahocorasick.cpp [19])
+) (./monotonequeue.cpp) (./unionfind.cpp) [19] (./ahocorasick.cpp)
 (./palindromictree.cpp
 Overfull \hbox (6.50084pt too wide) in paragraph at lines 1--2
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./suffixarray.cpp [20]) (./zfunction.cpp) (./prefix.cpp) (./minrotation.cpp)
-(./manacher.cpp [21]) (./suffixautomaton.cpp) (./stringhash.cpp [22]
+[20]) (./suffixarray.cpp) (./zfunction.cpp) [21] (./prefix.cpp)
+(./minrotation.cpp) (./manacher.cpp) (./suffixautomaton.cpp [22])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-) [23]
-LaTeX Font Info:    Try loading font information for U+msa on input line 132.
 
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+(./stringhash.cpp [23])
+LaTeX Font Info:    Try loading font information for U+msa on input line 137.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 132.
+LaTeX Font Info:    Try loading font information for U+msb on input line 137.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [24
-
-] (./book.aux) ) 
+) [24] (./book.aux) ) 
 Here is how much of TeX's memory you used:
- 5691 strings out of 495024
- 70214 string characters out of 6181989
- 254163 words of memory out of 5000000
- 8755 multiletter control sequences out of 15000+600000
- 8819 words of font info for 34 fonts, out of 8000000 for 9000
+ 5695 strings out of 495024
+ 70249 string characters out of 6181989
+ 248193 words of memory out of 5000000
+ 8758 multiletter control sequences out of 15000+600000
+ 9157 words of font info for 35 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,12n,58p,289b,1671s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pf
-b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on book.pdf (24 pages, 221863 bytes).
+ 39i,13n,58p,289b,1698s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
+fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on book.pdf (24 pages, 247897 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 137 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
